@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Sélecteurs css</title>
+    </head>
+
+    <body>
+
+        <head>
+
+        </head>
+
+        <section>
+            * => selecteur universel <br>
+
+            ul + p {<br>
+            } => premier élément après l'élément (ul) indiqué<br>
+
+
+            #container > p {<br>
+            } => prends tous les éléments enfants directs (sous-div)<br>
+
+            #containuer2 ~ p{ => selectionne les éléments directement arpès l'élément indiqué<br>
+            }<br>
+
+            attribut :<br>
+            h1[title] {<br>
+            }<br>
+            dans le html => <h1 title="mon libellé">bla bla bla</h1><br>
+
+            Exemple des formulaires :<br>
+            input [type="text"]{<br>
+            ..<br>
+            }<br>
+
+            input [type="mail"]{<br>
+            ..<br>
+            }<br>
+
+
+            checkbox :<br>
+
+            input[type=checkbox]{<br>
+            display:none;<br>
+            }<br>
+            input:checked + lable {<br>
+            font-size:50px;<br>
+            }<br>
+
+
+            not => qu'on ne veut pas selectionner<br>
+            .one:not(.three) {<br>
+            }<br>
+
+            nth-child => selectionner un enfant<br>
+            fonctionne avec even (pair) et impair(odd)<br>
+            .item:nth-child(3){<br>
+            }<br>
+            ou en partant de la fin<br>
+            .item:nth-last-child(3){<br>
+            }<br>
+        </section>
+    </body>
+
+</html>

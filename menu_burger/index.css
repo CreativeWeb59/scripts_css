@@ -11,7 +11,7 @@ body{
 }
 
 nav{
-    background: #0082e6;
+    background: #05be4c;
     height: 80px;
     width: 100%;
 }
@@ -44,7 +44,9 @@ nav ul li a{
 }
 
 a.active, a:hover{
-    background: #1b9bff;
+    /*background: #1f1f1f;*/
+    color: #1f1f1f;
+    font-weight: bold;
     transition: .5s;
 }
 .checkbtn{
@@ -96,7 +98,7 @@ a.active, a:hover{
     }
     a:hover,a.active{
         background: none;
-        color: #0082e6;
+        color: #05be4c;
     }
     #check:checked ~ ul{
         left:0;
@@ -104,7 +106,7 @@ a.active, a:hover{
 }
 
 section{
-    background: url(bg1.jpg) no-repeat; 
-    background-size: cover;
-    height: calc(100vh -80px);
+    background: lightskyblue;
+    width: 100%;
+    height: calc(100vh - 80px);
 }
