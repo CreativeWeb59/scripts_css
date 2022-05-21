@@ -1,70 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Sélecteurs css</title>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../commum.css">
+    <title>Hover souligné</title>
+  </head>
 
-    <body>
+  <body>
 
-        <head>
+    <header>
+      <div>
+        <img src="../images/logo.png" alt="Mon logo">
+      </div>
+      <div>
+        <h1>Des scripts Html et Css utiles</h1>
+      </div>
+      <div>
+        <a href="../index.html">Retour au menu</a>
+      </div>
+    </header>
+    <div class="exemple">
+      <h2>Les types de sélecteurs en Css</h2>
 
-        </head>
+        <div class="contenu">
+            
+            <h3>* : selecteur universel <span> : Permet de sélectionner toutes les balises de la page html</span></h3>
 
-        <section>
-            * => selecteur universel <br>
+            <h3>ul + p { }<span> : premier élément après l'élément (ul) indiqué</span></h3>
 
-            ul + p {<br>
-            } => premier élément après l'élément (ul) indiqué<br>
+            <h3>#container > p { }<span> : prends tous les éléments enfants directs (sous-div)</span></h3>
+            
+            <h3>#container2 ~ p{ }<span> : sélectionne les éléments directement après l'élément indiqué</span></h3>
 
+        </div>      
+        
+        <h2>Les attributs en Css</h2>    
 
-            #container > p {<br>
-            } => prends tous les éléments enfants directs (sous-div)<br>
-
-            #containuer2 ~ p{ => selectionne les éléments directement arpès l'élément indiqué<br>
-            }<br>
-
-            attribut :<br>
-            h1[title] {<br>
-            }<br>
-            dans le html => <h1 title="mon libellé">bla bla bla</h1><br>
-
-            Exemple des formulaires :<br>
-            input [type="text"]{<br>
-            ..<br>
-            }<br>
-
-            input [type="mail"]{<br>
-            ..<br>
-            }<br>
-
-
-            checkbox :<br>
-
-            input[type=checkbox]{<br>
-            display:none;<br>
-            }<br>
-            input:checked + lable {<br>
-            font-size:50px;<br>
-            }<br>
-
-
-            not => qu'on ne veut pas selectionner<br>
-            .one:not(.three) {<br>
-            }<br>
-
-            nth-child => selectionner un enfant<br>
-            fonctionne avec even (pair) et impair(odd)<br>
-            .item:nth-child(3){<br>
-            }<br>
-            ou en partant de la fin<br>
-            .item:nth-last-child(3){<br>
-            }<br>
-        </section>
+        <div class="contenu">
+            <h3>h1[title] { }<span> dans le html : &lt;h1 title=&quot;mon libell&eacute;&quot;&gt;bla bla bla&lt;/h1&gt;</span></h3>
+            <h3>Exemple des formulaires ;</h3>
+            <h3>input [type="text"]{ }<span></span></h3>
+            <h3>input [type="mail"]{ }<span></span></h3>
+            <h3>input [type="checkbox"]{ display:none; }<span></span></h3>
+            <h3>not<span> : qu'on ne veut pas selectionner</span></h3>
+            <h3>.one:not(.three) { }<span></span></h3>
+    
+            <h3>nth-child(n) { }<span> : selectionner un enfant</span></h3>
+            <h3>.item:nth-last-child(3){ }<span></span> : ou en partant de la fin</h3>
+        </div>
+        
+        
+    </div>
     </body>
 
 </html>

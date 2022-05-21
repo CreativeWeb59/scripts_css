@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../commum.css">
+    <title>Hover souligné</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div>
+        <img src="../images/logo.png" alt="Mon logo">
+      </div>
+      <div>
+        <h1>Des scripts Html et Css utiles</h1>
+      </div>
+      <div>
+        <a href="../index.html">Retour au menu</a>
+      </div>
+    </header>
+    <div class="exemple">
+      <h2>Différents soulignements Hover</h2>
+
+      <nav>
+        <ul>
+          <li>
+            <h3 class="sliding-middle-out">Par le centre</h3>
+          </li>
+          <li>
+            <h3 class="sliding-u-l-r-l">Slide qui disparait</h3>
+          </li>
+          <li>
+            <h3 class="sliding-u-l-r">Slide gauche vers droite</h3>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section>
+      <div>
+        <h2>Html</h2>
+        <!-- exemple balise : &lt;br /&gt;. -->
+        <textarea name="" id="" cols="80" rows="16">
+          &lt;ul&gt;
+              &lt;li&gt;
+                  &lt;h3 class="sliding-middle-out"&gt;Middle Out&lt;/h3&gt;
+              &lt;/li&gt;
+              &lt;li&gt;      
+                  &lt;h3 class="sliding-u-l-r-l"&gt;Slide In & Off&lt;/h3&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                  &lt;h3 class="sliding-u-l-r"&gt;Left to Right&lt;/h3&gt;
+              &lt;/li&gt;    
+          &lt;/ul&gt;
+      </textarea>
+      </div>
+
+      <div>
+        <h2>Css</h2>
+        <textarea name="" id="" cols="80" rows="16">
+/* Middle Out */
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+}
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 8px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: #3366FF;
+}
+
+/* Slide In, Slide Off */
+.sliding-u-l-r-l {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+}
+.sliding-u-l-r-l:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+.sliding-u-l-r-l:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    background: #3366FF;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:before {
+    width: 100%;
+    background: #3366FF;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+/* Left to Right */
+.sliding-u-l-r {
+  display: inline-block;
+	position: relative;
+  text-decoration: none;
+}
+.sliding-u-l-r:after {
+  content: '';
+  position: absolute;
+  margin-bottom: -10px;
+  bottom: 0;
+  left: 2px;
+  width: 0;
+  border-bottom: 8px solid #3366FF;
+  transition: 0.44s;
+}
+.sliding-u-l-r:hover:after {
+  width: 99%;
+}
+
+/* Layout for Demo */
+body { margin:0 auto; padding:40px; background:#1C1E37 0 0; color:#eaeaea; font-family: 'Source Sans Pro',sans-serif; text-align:center; margin-top:0; font-size:2em; }
+@font-face { font-family: 'Source Sans Pro'; font-style: normal; font-weight: 400; src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGLhZfOo4eSOlrve6pGrXHAo.woff) format('woff'); }
+ul {list-style-type: none;width: 87%;}
+h3 { cursor: pointer; }
+/* End Layout for Demo */
+      </textarea>
+      </div>
+
+    </section>
+  </body>
+
+</html>

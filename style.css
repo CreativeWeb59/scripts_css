@@ -88,3 +88,39 @@
   a:hover:before {
     width: 100%;
    }
+
+   header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #1f1f1f;
+   }
+
+   header div:nth-child(1){
+    width: 20%; 
+    text-align: center;
+   }
+
+   header div:nth-child(2){
+    width: 60%; 
+  }
+
+  header div:nth-child(3){
+    width: 20%; 
+    text-align: center;
+  }
+
+   h1 {
+    color: lightcoral; 
+    text-align: center;
+   }
+
+   header div img{
+     width: 150px;
+     height: auto;
+   }
+
+   header div:nth-child(3) a{
+    color: white;
+  }

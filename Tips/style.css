@@ -1,0 +1,18 @@
+.contenu{
+    width: 80%;
+    height: 60%;
+    margin: 20px auto 0 auto;    
+    box-shadow: 0 1px 1px 1px #1f1f1f;
+    text-align: left;
+    padding: 30px;
+}
+
+.contenu h3{
+    color: darkred;
+    padding: 20px;
+}
+
+span{
+    font-size: 1rem;
+    color: #1f1f1f
+}

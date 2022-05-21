@@ -1,0 +1,35 @@
+.cadre-defilement {
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    height: 80px;
+    margin-left: 3px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    border:5px solid #DDD;
+}
+img {
+    position: absolute;
+    transition: all 0.2s ease 0s;
+}
+
+
+ .cadre-defilement:hover >img
+ {  
+ -moz-animation: border-bounce 3000ms linear;
+ -webkit-animation: border-bounce 3000ms linear;
+ }
+ @-moz-keyframes border-bounce {
+ 0%   { margin-top: -10px;  }
+ 25%  { margin-top: -50px; }
+ 50%  { margin-top: -100px;  }
+ 75%  { margin-top: -50px;  }
+ 100% { margin-top: -0px;  }
+ }
+ @-webkit-keyframes border-bounce {
+ 0%   { margin-top: -10px;  }
+ 25%  { margin-top: -50px; }
+ 50%  { margin-top: -100px;  }
+ 75%  { margin-top: -50px;  }
+ 100% { margin-top: -0px;  }
+ }

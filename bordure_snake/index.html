@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../commum.css">
+    <script src="https://kit.fontawesome.com/097058085d.js" crossorigin="anonymous"></script>
+    <title>Bordure snake sur Hover</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div>
+        <img src="../images/logo.png" alt="Mon logo">
+      </div>
+      <div>
+        <h1>Des scripts Html et Css utiles</h1>
+      </div>
+      <div>
+        <a href="../index.html">Retour au menu</a>
+      </div>
+    </header>
+    <div class="exemple">
+        <h2>Bordure snake sur hover</h2>
+  
+        <div class="contain-recherche">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    <section>
+        <div>
+          <h2>Html</h2>
+          <!-- exemple balise : &lt;br /&gt;. -->
+          <textarea name="" id="" cols="80" rows="16">
+            &lt;head&gt;
+                &lt;script src=&quot;https://kit.fontawesome.com/097058085d.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+            &lt;/head&gt;
+
+            &lt;ul&gt; 
+            &lt;li&gt; 
+                &lt;a href=&quot;#&quot;&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;i class=&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt; 
+                &lt;/a&gt; 
+            &lt;/li&gt; 
+            &lt;li&gt; 
+                &lt;a href=&quot;#&quot;&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;i class=&quot;fab fa-twitter&quot;&gt;&lt;/i&gt; 
+                &lt;/a&gt; 
+            &lt;/li&gt; 
+            &lt;li&gt; 
+                &lt;a href=&quot;#&quot;&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;i class=&quot;fab fa-google-plus-g&quot;&gt;&lt;/i&gt; 
+                &lt;/a&gt; 
+            &lt;/li&gt; 
+            &lt;li&gt; 
+                &lt;a href=&quot;#&quot;&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;i class=&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt; 
+                &lt;/a&gt; 
+            &lt;/li&gt; 
+            &lt;li&gt; 
+                &lt;a href=&quot;#&quot;&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;span&gt;&lt;/span&gt; 
+                    &lt;i class=&quot;fab fa-instagram&quot;&gt;&lt;/i&gt; 
+                &lt;/a&gt; 
+            &lt;/li&gt; 
+        &lt;/ul&gt;
+        </textarea>
+        </div>
+  
+        <div>
+          <h2>Css</h2>
+          <textarea name="" id="" cols="80" rows="16">
+  
+            ul{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            
+            ul li{
+                list-style: none;
+            }
+            
+            ul li a {
+                display: block;
+                position: relative;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 20px;
+                text-align: center;
+                text-decoration: none;
+                color: #262626;
+                margin: 0 10px;
+                transition: .5s;
+            }
+            
+            ul li a span{
+                position: absolute;
+                transition: transform .5s;
+            }
+            
+            /* Ligne haut bas */
+            ul li a span:nth-child(1),
+            ul li a span:nth-child(3){
+                width: 100%;
+                height: 1px;
+                background: #262626;
+            }
+            
+            ul li a span:nth-child(1){
+                top: 0;
+                left: 0;
+                transform-origin: right;
+            }
+            ul li a:hover span:nth-child(1){
+                transform: scale(0);
+                transform-origin: left;
+                transition: transform .5s;
+            }
+            
+            ul li a span:nth-child(3){
+                bottom: 0;
+                left: 0;
+                transform-origin: left;
+            }
+            ul li a:hover span:nth-child(3){
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform .5s;
+            }
+            
+            /* Ligne droite gauche */
+            ul li a span:nth-child(2),
+            ul li a span:nth-child(4){
+                width: 1px;
+                height: 100%;
+                background: #262626;
+            }
+            
+            ul li a span:nth-child(2){
+                top: 0;
+                left: 0;
+                transform: scaleY(0);
+                transform-origin: bottom;
+            }
+            ul li a:hover span:nth-child(2){
+                transform: scaleY(1);
+                transform-origin: top;
+                transition: transform .5s;
+            }
+            
+            ul li a span:nth-child(4){
+                bottom: 0;
+                right: 0;
+                transform: scaleY(0);
+                transform-origin: top;
+            }
+            ul li a:hover span:nth-child(4){
+                transform: scaleY(1);
+                transform-origin: bottom;
+                transition: transform .5s;
+            }
+  
+        </textarea>
+        </div>
+  
+      </section>
+    </body>
+
+</html>

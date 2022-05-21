@@ -1,0 +1,91 @@
+ul {
+  margin-top: 50px;
+  list-style-type: none;
+  width: 100%;
+}
+
+li{
+  height: 50px;
+}
+
+h3 {
+  cursor: pointer;
+  text-align: center;
+}
+/* End Layout for Demo */
+
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+}
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 8px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: #3366FF;
+}
+
+/* Slide In, Slide Off */
+.sliding-u-l-r-l {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+}
+.sliding-u-l-r-l:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+.sliding-u-l-r-l:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    background: #3366FF;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:before {
+    width: 100%;
+    background: #3366FF;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+/* Left to Right */
+.sliding-u-l-r {
+  display: inline-block;
+	position: relative;
+  text-decoration: none;
+}
+.sliding-u-l-r:after {
+  content: '';
+  position: absolute;
+  margin-bottom: -10px;
+  bottom: 0;
+  left: 2px;
+  width: 0;
+  border-bottom: 8px solid #3366FF;
+  transition: 0.44s;
+}
+.sliding-u-l-r:hover:after {
+  width: 99%;
+}

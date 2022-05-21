@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../commum.css">
+    <title>Hover souligné</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div>
+        <img src="../images/logo.png" alt="Mon logo">
+      </div>
+      <div>
+        <h1>Des scripts Html et Css utiles</h1>
+      </div>
+      <div>
+        <a href="../index.html">Retour au menu</a>
+      </div>
+    </header>
+    <div class="exemple">
+        <h2>Hover défilant une image</h2>
+        </div>
+        <span class="cadre-defilement">
+            <img width="300px" height="auto" src="chien.jpg" style="top: 0px" />
+        </span>
+
+    <section>
+        <div>
+          <h2>Html</h2>
+          <!-- exemple balise : &lt;br /&gt;. -->
+          <textarea name="" id="" cols="80" rows="16">
+            &lt;span class=&quot;cadre-defilement&quot;&gt;
+                &lt;img width=&quot;300px&quot; height=&quot;auto&quot;
+                src=&quot;chien.jpg&quot; style=&quot;top: 0px&quot; /&gt;
+            &lt;/span&gt;
+        </textarea>
+        </div>
+  
+        <div>
+          <h2>Css</h2>
+          <textarea name="" id="" cols="80" rows="16">
+  
+            .cadre-defilement {
+                border-radius: 5px 5px 5px 5px;
+                float: left;
+                height: 80px;
+                margin-left: 3px;
+                overflow: hidden;
+                position: relative;
+                width: 300px;
+                border:5px solid #DDD;
+            }
+            img {
+                position: absolute;
+                transition: all 0.2s ease 0s;
+            }
+            
+            
+             .cadre-defilement:hover >img
+             {  
+             -moz-animation: border-bounce 3000ms linear;
+             -webkit-animation: border-bounce 3000ms linear;
+             }
+             @-moz-keyframes border-bounce {
+             0%   { margin-top: -10px;  }
+             25%  { margin-top: -50px; }
+             50%  { margin-top: -100px;  }
+             75%  { margin-top: -50px;  }
+             100% { margin-top: -0px;  }
+             }
+             @-webkit-keyframes border-bounce {
+             0%   { margin-top: -10px;  }
+             25%  { margin-top: -50px; }
+             50%  { margin-top: -100px;  }
+             75%  { margin-top: -50px;  }
+             100% { margin-top: -0px;  }
+             }
+            
+  
+        </textarea>
+        </div>
+  
+      </section>
+
+      <h2>Hover défilant une image</h2>
+  
+
+    </body>
+
+</html>

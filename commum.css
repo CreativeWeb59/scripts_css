@@ -1,0 +1,81 @@
+/* Commun à tous */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color:#1a1818;
+  }
+  
+  header{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #1f1f1f;
+    text-align: center;
+   }
+  
+   header div:nth-child(1){
+    width: 20%; 
+    text-align: center;
+   }
+  
+   header div:nth-child(2){
+    width: 60%; 
+  }
+  
+  header div:nth-child(3){
+    width: 20%; 
+    text-align: center;
+  }
+  
+   h1 {
+    color: lightcoral; 
+    text-align: center;
+   }
+  
+   header div img{
+     width: 150px;
+     height: auto;
+   }
+  
+   header div:nth-child(3) a{
+    color: white;
+  }
+  
+  .exemple{
+    margin: 50px 0;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  h2{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 2rem;
+  }
+  
+  section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding-top: 100px;
+  }
+  
+  section div{
+    width: 40%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  textarea {
+    resize: none;
+    padding: 10px;
+  }
