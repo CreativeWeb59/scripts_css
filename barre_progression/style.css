@@ -22,12 +22,12 @@
     width: 100%;
     height: 20px;
     background: #333;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
 }
 
 .bar{
     height: 100%;
-    border-radius: 10px 0 0 10px;
+    /*border-radius: 20px 0 0 20px;*/
 }
 
 .barOne{
@@ -62,3 +62,14 @@
         width: 100%;
     }
 }
+
+.progress-bar-barre { 	
+    background-color: rgb(233, 97, 97); 
+    width: 100%; 
+    background-image: linear-gradient(
+          45deg, red 25%, 
+          transparent 25%, transparent 50%, 
+          red 50%, red 75%,
+          transparent 75%, transparent); 
+    animation: progressAnimationStrike 6s;
+  }
