@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../commum.css">
+        <title>Texte effet 3D</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div>
+                <img src="../images/logo.png" alt="Mon logo">
+            </div>
+            <div>
+                <h1>Des scripts Html et Css utiles</h1>
+            </div>
+            <div>
+                <a href="../index.html">Retour au menu</a>
+            </div>
+        </header>
+        <div class="exemple">
+            <h2>Texte effet 3D</h2>
+
+            <div class="container">
+                <h2 class="white">Texte blanc</h2>
+                <h2 class="black">Texte noir</h2>
+                <h2 class="red">Texte rouge</h2>
+            </div>
+
+        </div>
+        <section>
+            <div>
+                <h2>Html</h2>
+                <!-- exemple balise : &lt;br /&gt;. -->
+                <textarea name="" id="" cols="80" rows="16">
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;h2 class=&quot;white&quot;&gt;Texte blanc&lt;/h2&gt;
+                &lt;h2 class=&quot;black&quot;&gt;Texte noir&lt;/h2&gt;
+                &lt;h2 class=&quot;red&quot;&gt;Texte rouge&lt;/h2&gt;
+            &lt;/div&gt;
+        </textarea>
+            </div>
+
+            <div>
+                <h2>Css</h2>
+                <textarea name="" id="" cols="80" rows="16">
+
+.container {
+    background: lightblue;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.white {
+    margin: 0;
+    font-size: 100px;
+    color: #f7f8f8;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
+        0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
+        0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+}
+
+.black {
+    margin: 0;
+    font-size: 100px;
+    color: #424139;
+    text-shadow: 0 1px 0 #32312b, 0 2px 0 #32312b, 0 3px 0 #32312b,
+        0 4px 0 #32312b, 0 5px 0 #32312b, 0 6px 0 #32312b, 0 7px 0 #32312b,
+        0 8px 0 #32312b, 0 9px 0 #32312b, 0 50px 30px rgba(0, 0, 0, 0.8);
+}
+.red {
+    margin: 0;
+    font-size: 100px;
+    color: #d83b0d;
+    text-shadow: 0 1px 0 #ae3214, 0 2px 0 #ae3214, 0 3px 0 #ae3214,
+        0 4px 0 #ae3214, 0 5px 0 #ae3214, 0 6px 0 #ae3214, 0 7px 0 #ae3214,
+        0 8px 0 #ae3214, 0 9px 0 #ae3214, 0 50px 30px rgba(106, 29, 6, 0.7);
+}
+  
+        </textarea>
+            </div>
+
+        </section>
+    </body>
+
+</html>
