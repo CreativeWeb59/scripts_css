@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../commum.css">
+    <title>Barre de progression</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div>
+        <img src="../images/logo.png" alt="Mon logo">
+      </div>
+      <div>
+        <h1>Des scripts Html et Css utiles</h1>
+      </div>
+      <div>
+        <a href="../index.html">Retour au menu</a>
+      </div>
+    </header>
+    <div class="exemple">
+        <h2>Barre de progression</h2>
+  
+        <div class="container">
+          <!-- Premiere barre -->
+            <div class="progressContainer">
+              <div class="info">
+                <p>Html</p>
+                <p>90%</p>
+              </div>
+              <div class="progressBar">
+                <div class="bar barOne"></div>
+              </div>
+            </div>
+
+         <!-- Deuxième barre -->
+            <div class="progressContainer">
+              <div class="info">
+                <p>Css</p>
+                <p>70%</p>
+              </div>
+              <div class="progressBar">
+                <div class="bar barTwo"></div>
+              </div>
+            </div>
+
+          <!-- Troisième barre -->
+          <div class="progressContainer">
+            <div class="info">
+              <p>Javascript</p>
+              <p>40%</p>
+            </div>
+            <div class="progressBar">
+              <div class="bar barThree"></div>
+            </div>
+          </div>
+
+        <!-- Quatrième barre -->
+          <div class="progressContainer">
+            <div class="info">
+              <p>Git / Github</p>
+              <p>50%</p>
+            </div>
+            <div class="progressBar">
+              <div class="bar barFour"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    <section>
+        <div>
+          <h2>Html</h2>
+          <!-- exemple balise : &lt;br /&gt;. -->
+          <textarea name="" id="" cols="80" rows="16">
+            &lt;div class=&quot;container&quot;&gt;
+            &lt;!-- Premiere barre --&gt;
+              &lt;div class=&quot;progressContainer&quot;&gt;
+                &lt;div class=&quot;info&quot;&gt;
+                  &lt;p&gt;Html&lt;/p&gt;
+                  &lt;p&gt;90%&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;progressBar&quot;&gt;
+                  &lt;div class=&quot;bar barOne&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+  
+           &lt;!-- Deuxi&egrave;me barre --&gt;
+              &lt;div class=&quot;progressContainer&quot;&gt;
+                &lt;div class=&quot;info&quot;&gt;
+                  &lt;p&gt;Css&lt;/p&gt;
+                  &lt;p&gt;70%&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;progressBar&quot;&gt;
+                  &lt;div class=&quot;bar barTwo&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+  
+            &lt;!-- Troisi&egrave;me barre --&gt;
+            &lt;div class=&quot;progressContainer&quot;&gt;
+              &lt;div class=&quot;info&quot;&gt;
+                &lt;p&gt;Javascript&lt;/p&gt;
+                &lt;p&gt;40%&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;progressBar&quot;&gt;
+                &lt;div class=&quot;bar barThree&quot;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+  
+          &lt;!-- Quatri&egrave;me barre --&gt;
+            &lt;div class=&quot;progressContainer&quot;&gt;
+              &lt;div class=&quot;info&quot;&gt;
+                &lt;p&gt;Git / Github&lt;/p&gt;
+                &lt;p&gt;50%&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;progressBar&quot;&gt;
+                &lt;div class=&quot;bar barFour&quot;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+  
+          &lt;/div&gt;
+        </textarea>
+        </div>
+  
+        <div>
+          <h2>Css</h2>
+          <textarea name="" id="" cols="80" rows="16">
+  
+            .container{
+              width: 100%;
+              max-width: 460px;
+              margin: auto;
+          }
+          
+          .progressContainer{
+              width: 100%;
+              padding: 8px 0;
+          }
+          
+          .info{
+              padding: 8px 0;
+              color: #000;
+              font-size: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+          }
+          
+          .progressBar{
+              width: 100%;
+              height: 20px;
+              background: #333;
+              border-radius: 20px;
+          }
+          
+          .bar{
+              height: 100%;
+              border-radius: 10px 0 0 10px;
+          }
+          
+          .barOne{
+              max-width: 90%;
+              background: red;
+              animation: animate 4s ease-in-out;
+          }
+          
+          .barTwo{
+              max-width: 70%;
+              background: #2db2df;
+              animation: animate 5s ease-in-out;
+          }
+          
+          .barThree{
+              max-width: 40%;
+              background: orange;
+              animation: animate 3s ease-in-out;
+          }
+          
+          .barFour{
+              max-width: 50%;
+              background: lightgreen;
+              animation: animate 3s ease-in-out;
+          }
+          
+          @keyframes animate{
+              from{
+                  width: 0;
+              }
+              to{
+                  width: 100%;
+              }
+          }
+  
+        </textarea>
+        </div>
+  
+      </section>
+    </body>
+
+</html>
