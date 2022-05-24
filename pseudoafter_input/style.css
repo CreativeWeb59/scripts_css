@@ -1,0 +1,59 @@
+/* Formulaire de connexion */
+
+
+.formulaire{
+    width: 80%;
+    max-width: 400px;
+    color: #40a681;
+    font-size: 2em;
+    margin: 0% auto;
+}
+  
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 25px 0;
+    position: relative;
+}
+
+input{
+    width: 100%;
+    height: 52px;
+    padding: 20px 40px 20px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    border: 1px solid #b2b2b2;
+    box-shadow: inset 0 1px 4px #e1e1e1;
+}
+
+button {
+    width: 100%;
+    background: #75d0af;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn {
+    background: #40a681;
+    text-decoration: none;
+    margin: 0;
+    padding: 15px 15px;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+
+  .form fieldset:after {
+    content: '\f007';
+    font-family: FontAwesome;
+    z-index: 2;
+    width: 20px;
+    color: #cccccc;
+    text-align: right;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.form fieldset.password:after {
+    content: '\f023';
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../commum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hover souligné</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div>
+        <img src="../images/logo.png" alt="Mon logo">
+      </div>
+      <div>
+        <h1>Des scripts Html et Css utiles</h1>
+      </div>
+      <div>
+        <a href="../index.html">Retour au menu</a>
+      </div>
+    </header>
+    <div class="exemple">
+        <h2>Une icone Fontawesome dans un input</h2>
+        <a href="https://fontawesome.com/" target="_blank">site Fontawesome</a>
+        <div class="formulaire">
+            <form class="form" method="GET" action="poules.html">
+                <fieldset class="username">
+                    <input type="text" required placeholder="identifiant" />
+                </fieldset>
+                <fieldset class="password">
+                    <input type="password" required placeholder="mot de passe" />
+                </fieldset>
+                    <button type="submit" class="btn">valider</button>
+            </form>
+        </div>
+
+      </div>
+    <section>
+        <div>
+          <h2>Html</h2>
+          <!-- exemple balise : &lt;br /&gt;. -->
+          <textarea name="" id="" cols="80" rows="16">
+            Dans le &lt;head&gt; :
+    
+            &lt;head&gt;
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+            &lt;/head&gt;
+
+            Ensuite dans le body :
+            
+            &lt;div class=&quot;formulaire&quot;&gt;
+                &lt;form class=&quot;form&quot; method=&quot;GET&quot; action=&quot;poules.html&quot;&gt;
+                    &lt;fieldset class=&quot;username&quot;&gt;
+                        &lt;input type=&quot;text&quot; required placeholder=&quot;identifiant&quot; /&gt;
+                    &lt;/fieldset&gt;
+                &lt;fieldset class=&quot;password&quot;&gt;
+                    &lt;input type=&quot;password&quot; required placeholder=&quot;mot de passe&quot; /&gt;
+                &lt;/fieldset&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;valider&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        </textarea>
+        </div>
+  
+        <div>
+          <h2>Css</h2>
+          <textarea name="" id="" cols="80" rows="16">
+  
+            /* Formulaire de connexion */
+
+
+            .formulaire{
+                width: 80%;
+                max-width: 400px;
+                color: #40a681;
+                font-size: 2em;
+                margin: 0% auto;
+            }
+              
+            fieldset{
+                border: none;
+                padding: 0;
+                margin: 25px 0;
+                position: relative;
+            }
+            
+            input{
+                width: 100%;
+                height: 52px;
+                padding: 20px 40px 20px 20px;
+                border-radius: 5px;
+                font-size: 24px;
+                border: 1px solid #b2b2b2;
+                box-shadow: inset 0 1px 4px #e1e1e1;
+            }
+            
+            button {
+                width: 100%;
+                background: #75d0af;
+                border: none;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .btn {
+                background: #40a681;
+                text-decoration: none;
+                margin: 0;
+                padding: 15px 15px;
+                border-radius: 5px;
+                color: #ffffff;
+              }
+            
+              .form fieldset:after {
+                content: '\f007';
+                font-family: FontAwesome;
+                z-index: 2;
+                width: 20px;
+                color: #cccccc;
+                text-align: right;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+            
+            .form fieldset.password:after {
+                content: '\f023';
+            }
+  
+        </textarea>
+        </div>
+  
+      </section>
+    </body>
+
+</html>

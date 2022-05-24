@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../commum.css">
+    <title>Hover souligné</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div>
+        <img src="../images/logo.png" alt="Mon logo">
+      </div>
+      <div>
+        <h1>Des scripts Html et Css utiles</h1>
+      </div>
+      <div>
+        <a href="../index.html">Retour au menu</a>
+      </div>
+    </header>
+    <div class="exemple">
+        <h2>Modèle</h2>
+        <div class="boutons">
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+            <a >Survolez moi</a>
+          </div>
+      </div>
+      <h2 class="lien1">source : <a href="https://codepen.io/linh-quang-inh/pen/GemGXw" target="_blank">Codepen.io</a></h2>
+      <section>
+        <div>
+          <h2>Html</h2>
+          <!-- exemple balise : &lt;br /&gt;. -->
+          <textarea name="" id="" cols="80" rows="16">
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;h3 class="sliding-middle-out"&gt;Middle Out&lt;/h3&gt;
+                &lt;/li&gt;
+                &lt;li&gt;      
+                    &lt;h3 class="sliding-u-l-r-l"&gt;Slide In & Off&lt;/h3&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h3 class="sliding-u-l-r"&gt;Left to Right&lt;/h3&gt;
+                &lt;/li&gt;    
+            &lt;/ul&gt;
+        </textarea>
+        </div>
+  
+        <div>
+          <h2>Css</h2>
+          <textarea name="" id="" cols="80" rows="16">
+  
+            .exemple{
+                background-image: linear-gradient(#FF3030,#e66465, #9198e5);
+            }
+            
+            .boutons{
+                display:grid;
+                grid-template-columns:auto auto auto auto;
+                grid-gap:50px;
+                margin:50px 0 0;
+              }
+              .boutons a{
+                width:150px;
+                height:50px;
+                font-size:16px;
+                margin:auto;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                position:relative;
+                cursor:pointer;
+              }
+              /** hover 1 */
+              a:nth-child(1){
+                color:#fff;
+                transition:.3s all;
+              }
+              a:nth-child(1):before,a:nth-child(1):after{
+                content:'';
+                position:absolute;
+                width:0%;
+                height:100%;
+                transition:.3s all;
+              }
+              a:nth-child(1):before{
+                left:0;
+                border-top:2px solid #fff;
+              }
+              a:nth-child(1):after{
+                right:0;
+                border-bottom:2px solid #fff;
+              }
+              a:nth-child(1):hover{
+                font-weight:bold;
+                letter-spacing:2px;
+              }
+              a:nth-child(1):hover:after,a:nth-child(1):hover:before{
+                width:100%;
+              }
+              /** end hover 1*/
+              /** hover 2 */
+              a:nth-child(2){
+                color:#fff;
+                border:1px solid #fff;
+                overflow:hidden;
+              }
+              a:nth-child(2):before,a:nth-child(2):after{
+                content:'';
+                position:absolute;
+                height:100%;
+                transform:skew(45deg);
+                width:20%;
+                left:-40%;
+              }
+              a:nth-child(2):before{
+                background:rgba(255,255,255,.3);
+                transition:.1s all;
+              }
+              a:nth-child(2):after{
+                background:rgba(255,255,255,.1);
+                transition:.4s all;
+              }
+              a:nth-child(2):hover:after,a:nth-child(2):hover:before{
+                left:120%;
+              }
+              /** end hover 2*/
+              /** hover 3 */
+              a:nth-child(3){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.3s all;
+              }
+              a:nth-child(3):before,a:nth-child(3):after{
+                content:'';
+                position:absolute;
+                width:100%;
+                height:100%;
+                left:0;
+                top:0;
+                border:.3px solid rgba(255,255,255,.7);
+                opacity:1;
+              }
+              a:nth-child(3):before{
+                 transition:.1s all ease-out;
+              }
+              a:nth-child(3):after{
+                 transition:.4s all ease-in;
+              }
+              a:nth-child(3):hover:after,a:nth-child(3):hover:before{
+                transform:scale(1.4);
+                opacity:0;
+              }
+              /** end hover 3*/
+              /** hover 4 */
+              a:nth-child(4){
+                color:#fff;
+                font-weight:bold;
+                position:relative;
+              }
+              a:nth-child(4):before{
+                content:'';
+                position:absolute;
+                width:100%;
+                height:100%;
+                left:0;
+                top:0;
+                z-index:-1;
+                background:rgba(255,255,255,.1);
+                box-shadow:2px 2px 5px #000;
+                transition:.2s all;
+              }
+              a:nth-child(4):hover:before{
+                background:rgba(0,0,0,.1);
+                box-shadow:2px 2px 3px #000 inset;
+              }
+              /** end hover 4*/
+              /** hover 5 */
+              a:nth-child(5){
+                color:#fff;
+                font-weight:bold;
+                position:relative;
+                border:1px solid #fff;
+                transition:.3s all;
+              }
+              a:nth-child(5):before{
+                content:'';
+                position:absolute;
+                width:0%;
+                left:0;
+                height:100%;
+                background:#fff;
+                transition:.3s;
+                z-index:-1;
+              }
+              a:nth-child(5):hover{
+                color:#FF3030;
+              }
+              a:nth-child(5):hover:before{
+                width:100%;
+              }
+              /** end hover 5*/
+              /** hover 6 */
+              a:nth-child(6){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.3s all;
+              }
+              a:nth-child(6):before,a:nth-child(6):after{
+                content:'';
+                position:absolute;
+                width:100%;
+                height:0%;
+                left:0;
+                background:#fff;
+                transition:.3s all;
+                z-index:-1;
+              }
+              a:nth-child(6):before{
+                top:0;
+              }
+              a:nth-child(6):after{
+                bottom:0;
+              }
+              a:nth-child(6):hover{
+                color:#FF3030;
+                font-weight:bold;
+              }
+              a:nth-child(6):hover:after,a:nth-child(6):hover:before{
+                height:50%;
+              }
+              /** end hover 6*/
+              /** hover 7 */
+              a:nth-child(7){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.3s all;
+              }
+              a:nth-child(7):before,a:nth-child(7):after{
+                content:'';
+                position:absolute;
+                width:0%;
+                height:100%;
+                top:0;
+                background:#fff;
+                transition:.3s all;
+                z-index:-1;
+              }
+              a:nth-child(7):before{
+                left:0;
+              }
+              a:nth-child(7):after{
+                right:0;
+              }
+              a:nth-child(7):hover{
+                color:#FF3030;
+                font-weight:bold;
+              }
+              a:nth-child(7):hover:after,a:nth-child(7):hover:before{
+                width:50%;
+              }
+              /** end hover 7*/
+              /** hover 8 */
+              a:nth-child(8){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.3s all;
+                overflow:hidden;
+              }
+              a:nth-child(8):before{
+                content:'';
+                position:absolute;
+                width:30%;
+                height:100%;
+                top:0;
+                left:-60%;
+                background:#fff;
+                transition:.3s all;
+                z-index:-1;
+                transform:skew(45deg);
+              }
+              a:nth-child(8):hover{
+                color:#FF3030;
+                font-weight:bold;
+              }
+              a:nth-child(8):hover:before{
+                width:190%;
+              }
+              /** end hover 8*/
+              /** hover 9 */
+              a:nth-child(9){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.3s all;
+                overflow:hidden;
+              }
+              a:nth-child(9):before{
+                content:'';
+                position:absolute;
+                width:80%;
+                height:100%;
+                top:0;
+                left:-70%;
+                background:#fff;
+                transition:.3s all;
+                z-index:-1;
+                transform:skew(32deg);
+              }
+              a:nth-child(9):hover{
+               color:#FF3030;
+               font-weight:bold;
+              }
+              a:nth-child(9):hover:before{
+                left:10%;
+              }
+              /** end hover 9*/
+              /** hover 10 */
+              a:nth-child(10){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.8s all;
+                position:relative;
+                overflow:hidden;
+              }
+              a:nth-child(10):before,a:nth-child(10):after{
+                content:'';
+                position:absolute;
+                width: 20px;
+                height:20px;
+                border-radius:50%;
+                transition:.3s all;
+                z-index:-1;
+                background:#fff;
+              }
+              a:nth-child(10):before{
+                left:-20px;
+              }
+              a:nth-child(10):after{
+                 right:-20px;
+              }
+              a:nth-child(10):hover{
+                color:#FF3030;
+                font-weight:bold;
+              }
+              a:nth-child(10):hover:before{
+                animation:animationLeft10 .5s both;
+              }
+              a:nth-child(10):hover:after{
+                animation:animationRight10 .5s both;
+              }
+              @keyframes animationRight10{
+                0%{
+                  right: -20px;
+                }
+                50% {
+                  right: 50%;
+                  width: 20px;
+                  height: 20px;
+                }
+                100% {
+                  right: 50%;
+                  width: 375px;
+                  height: 375px;
+                }
+              }
+              @keyframes animationLeft10{
+                0%{
+                  left: -20px;
+                }
+                50% {
+                  left: 50%;
+                  width: 20px;
+                  height: 20px;
+                }
+                100% {
+                  right: 50%;
+                  width: 375px;
+                  height: 375px;
+                }
+              }
+              /** end hover 10*/
+              /** hover 11 */
+              a:nth-child(11){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.3s all;
+                overflow:hidden;
+              }
+              a:nth-child(11):before{
+                content:'';
+                position:absolute;
+                width:60%;
+                height:100%;
+                
+                left:25%;
+                background:transparent;
+                transition:.3s all;
+                z-index:-1;
+              }
+              a:nth-child(11):hover{
+               color:#FF3030;
+               font-weight:bold;
+              }
+              a:nth-child(11):hover:before{
+                width:100%;
+                left:0%;
+                background:#fff
+              }
+              /** end hover 11*/
+              /** hover 12 */
+              a:nth-child(12){
+                color:#fff;
+                transition:.5s all;
+                border:1px solid #fff;
+              }
+              a:nth-child(12):before,a:nth-child(12):after{
+                content:'';
+                position:absolute;
+                height:0%;
+                width:50%;
+                background:transparent;
+                transition:.3s all;
+                z-index:-1;
+              }
+              a:nth-child(12):before{
+                bottom:0;
+                left:0;
+              }
+              a:nth-child(12):after{
+                right:0;
+                top:0;
+              }
+              a:nth-child(12):hover{
+               color:#FF3030;
+              }
+              a:nth-child(12):hover:after,a:nth-child(12):hover:before{
+                height:100%;
+                background: #fff;
+              }
+              /** end hover 12*/
+              /** hover 13 */
+              a:nth-child(13){
+                color:#FF3030;
+                background:#fff;
+                border:1px solid #fff;
+                transition:.2s all;
+                overflow:hidden;
+                font-weight:bold;
+              }
+              a:nth-child(13):hover{
+                background:transparent;
+                color:#fff;
+              }
+              /** end hover 13*/
+              /** hover 14 */
+              a:nth-child(14){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.2s all;
+                overflow:hidden;
+                font-weight:bold;
+              }
+              a:nth-child(14):hover{
+                color:#FF3030;
+                background:#fff;
+                -webkit-transform: translate(-10px, -10px);
+                box-shadow:3px 3px 15px 2px #fff;
+              }
+              /** end hover 14*/
+              /** hover 15 */
+              a:nth-child(15){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.2s all;
+                overflow:hidden;
+                font-weight:bold;
+              }
+              a:nth-child(15):hover{
+                color:#FF3030;
+                background:#fff;
+              }
+              /** end hover 15*/
+              /** hover 16 */
+              a:nth-child(16){
+                color:#fff;
+                border:1px solid #fff;
+                transition:.3s all;
+              }
+              a:nth-child(16):after{
+                content:'';
+                position:absolute;
+                width:100%;
+                height:100%;
+                left:0;
+                top:0;
+                opacity:1;
+              }
+              a:nth-child(16):after{
+                transition:.6s all ;
+                transform:scale(0.1);
+              }
+              a:nth-child(16):hover:after{
+                background:#fff;
+                transform:scale(1.3);
+                opacity:0;
+              }
+              /** end hover 16*/
+              /** hover 17 */
+              a:nth-child(17){
+                color:#fff;
+                border:1px solid #fff;
+              }
+              a:nth-child(17):hover{
+                animation: animation17 1s;
+              }
+              @keyframes animation17{
+                from{
+                  opacity:0;
+                } 
+                to{
+                  opacity:1;
+                }
+              }
+              /** end hover 17*/
+              /** hover 18 */
+              a:nth-child(18){
+                color:#fff;
+                border:1px solid #fff;
+              }
+              a:nth-child(18):hover{
+                
+                animation: animation18 1s both;
+              }
+              @keyframes animation18{
+                from,to{
+                  -webkit-transform: translate3d(0, 0, 0);
+                } 
+                10%,30%,50%,70%,90%{
+                  -webkit-transform: translate3d(-10px, 0, 0);
+                }
+                20%,40%,60%,80%{
+                  -webkit-transform: translate3d(10px, 0, 0);
+                }
+                to{
+                  color:#FF3030;
+                   background:#fff;
+                }
+              }
+              /** end hover 18*/
+              /** hover 19 */
+              a:nth-child(19){
+                color:#fff;
+                transition:.2s all;
+              }
+              a:nth-child(19):before,a:nth-child(19):after{
+                content:'';
+                position:absolute;
+                height:100%;
+                width:0;
+                left:0;
+                top:0;
+                z-index:-1;
+              }
+              a:nth-child(19):before{
+                background:rgba(255,255,255,.4);
+                transition:.1s all;
+              }
+              a:nth-child(19):after{
+                background:rgb(255,255,255);
+                transition:.5s all;
+              }
+              a:nth-child(19):hover{
+                color:#FF3030;
+              }
+              a:nth-child(19):hover:before,a:nth-child(19):hover:after{
+                width:100%;
+              }
+              /** end hover 19*/
+              /** hover 20 */
+              a:nth-child(20){
+                color:#fff;
+                transition:.2s all;
+              }
+              a:nth-child(20):before,a:nth-child(20):after{
+                content:'';
+                position:absolute;
+                height:0;
+                width:0;
+                transition:.3s all;
+                z-index:-1;
+                border:1px solid #fff;
+              }
+              a:nth-child(20):before{
+                left:0;
+                top:0;
+              }
+              a:nth-child(20):after{
+                right:0;
+                bottom:0;
+              }
+              a:nth-child(20):hover{
+                color:#FF3030;
+              }
+              a:nth-child(20):hover:before,a:nth-child(20):hover:after{
+                background:rgba(255,255,255,.6);
+                width:100%;
+                height:100%;
+              }
+              /** end hover 20*/
+  
+        </textarea>
+        </div>
+  
+      </section>
+    </body>
+
+</html>
